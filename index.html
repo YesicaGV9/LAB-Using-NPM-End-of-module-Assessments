@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="apiNasa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Explorador NASA APOD</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark px-4 mb-4 shadow">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <span class="fs-3 me-2">🚀</span>
+            <strong>NASA API Explorer</strong>
+        </a>
+        <a href="#seccion-favoritos" class="btn btn-outline-info btnIrFavoritos">Ir a Favoritos</a>
+    </nav>
+
+    <div class="contenedorPrincipalF">
+
+        <!--  resultado y lista de favoritos -->
+        <div class="resultado">
+            <main class="container px-0">
+                <section class="row mb-5">
+                    <article id="apod-main" class="p-4">
+                        <h2 id="apod-title" class="text-info">Maravillas Del Universo</h2>
+                        <p id="apod-date" class="text-secondary small"></p>
+                        <div id="media-content" class="text-center my-3"></div>
+                        <p id="apod-desc" class="mt-3"></p>
+                    </article>
+                </section>
+
+                <section id="seccion-favoritos" class="mb-5 p-4">
+                    <header class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class=" mb-0 mx-auto tituloFavoritos">Mis Favoritos</h2>
+                        <!-- Boton borrar todos-->
+                        <button id="botonBorrarTodos" class="btnvaciarLista"><i class="fa-solid fa-trash-can"
+                                style="color: rgb(255, 255, 255);"></i> Vaciar lista</button>
+                    </header>
+
+                    <ul id="fav-container" class="list-group list-group-flush"></ul>
+                </section>
+            </main>
+        </div>
+
+        <!-- Buscador -->
+        <div class="contenedorFechasB">
+            <section class="mb-4 buscadorFechas">
+                <h4 class="tituloBuscador">Busca tu imagen del día</h4>
+                <label for="fecha" class="form-label">Escoge una fecha:</label>
+                <input type="date" id="fecha" class="inputFecha">
+                <!--  Botones del buscador -->
+                <button id="botonImagenHoy" type="button" class="btnbuscarHoy"><i class="fa-solid fa-calendar-day"
+                        style="color: rgb(255, 255, 255);"></i> Hoy</button>
+                <button id="btnBuscar" type="button" class="btnBuscador"><i class="fa-solid fa-magnifying-glass"
+                        style="color: rgb(255, 255, 255);"></i> Buscar</button>
+                <button id="btn-add-fav" class="btnFavoritos"><i class="fa-regular fa-star"
+                        style="color: rgb(255, 255, 255);"></i> Agregar a Favoritos</button>
+            </section>
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
